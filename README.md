@@ -188,4 +188,4 @@ SUCCESS: Your up workflow to provision and deploy to Azure completed in 5 minute
 
 - PostgreSQLにデータベース作成とテーブル作成、データ登録
 - ACRにToDoアプリと通知サービスのコンテナイメージをプッシュ
-- App ServiceにToDoアプリのデプロイ
+- App ServiceにToDoアプリのデプロイa
