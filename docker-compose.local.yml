@@ -34,19 +34,19 @@ services:
     stdin_open: true
     tty: true
 
-  notify-service:
-    image: notify-service:latest
-    build:
-      context: ./notify-service
-      dockerfile: Dockerfile
-    networks:
-      - udemy-learn-container
-    env_file:
-      - ./notify-service/.env.local.container
-    depends_on:
-      - db
-    stdin_open: true
-    tty: true
+  # notify-service:
+  #   image: notify-service:latest
+  #   build:
+  #     context: ./notify-service
+  #     dockerfile: Dockerfile
+  #   networks:
+  #     - udemy-learn-container
+  #   env_file:
+  #     - ./notify-service/.env.local.container
+  #   depends_on:
+  #     - db
+  #   stdin_open: true
+  #   tty: true
 
 volumes:
   postgres_data:

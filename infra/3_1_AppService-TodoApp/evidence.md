@@ -10,12 +10,12 @@
   },
   {
     "name": "POSTGRES_HOST",
-    "value": "udemytodoappshrkm0708-pg.postgres.database.azure.com",
+    "value": "udemytodoappmoto-pg.postgres.database.azure.com",
     "slotSetting": false
   },
   {
     "name": "POSTGRES_PASSWORD",
-    "value": "P@ssw0rd",
+    "value": "DMnao9041!!!",
     "slotSetting": false
   },
   {
@@ -50,11 +50,19 @@ ACRへの権限付与
 
 ```bash
 az webapp config container set `
-  --name udemytodoapp-app `
-  --resource-group rg-todo `
-  --container-image-name udemytodoappacr01.azurecr.io/todo-app:latest
+  --name udemytodoappmoto-app `
+  --resource-group rg-udemytodoappmoto `
+  --container-image-name udemytodoappmotoacr01.azurecr.io/todo-app:latest
 ```
 
+```
+az webapp config container set `
+  --name udemytodoappmoto-app `
+  --resource-group rg-udemytodoappmoto `
+  --docker-custom-image-name udemytodoappmotoacr01.azurecr.io/todo-app:latest `
+  --docker-registry-server-url https://udemytodoappmotoacr01.azurecr.io
+  --acr-use-managed-identity
+  ```
 Portalで継続的デプロイをONに
 
 AzurePortalで確認

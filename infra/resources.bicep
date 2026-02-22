@@ -98,15 +98,15 @@ resource appServiceTodo 'Microsoft.Web/sites@2022-09-01' = {
   }
 }
 
-resource appServiceNotify 'Microsoft.Web/sites@2022-09-01' = {
-  name: '${prefix}-notify'
-  location: location
-  kind: 'app,linux,container'
-  properties: {
-    serverFarmId: appServicePlan.id
-    httpsOnly: true
-    siteConfig: {
-      // linuxFxVersion: 'DOCKER|<notify-service-image>' // デプロイ時にイメージ名へ置換
-    }
-  }
-}
+// resource appServiceNotify 'Microsoft.Web/sites@2022-09-01' = {
+//   name: '${prefix}-notify'
+//   location: location
+//   kind: 'app,linux,container'
+//   properties: {
+//     serverFarmId: appServicePlan.id
+//     httpsOnly: true
+//     siteConfig: {
+//       // linuxFxVersion: 'DOCKER|<notify-service-image>' // デプロイ時にイメージ名へ置換
+//     }
+//   }
+// }
